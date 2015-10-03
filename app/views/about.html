@@ -1,0 +1,33 @@
+<div class="container">
+
+  <p>This is the about view.</p>
+
+
+  <textarea ng-model="message"></textarea>
+
+  <hr/>
+
+
+  <button ng-click="sendMessage()">Send message</button>
+  <button ng-click="sendObject(red)">Roter Stein</button>
+  <button ng-click="sendObject(blue)">Baluer Stein</button>
+  <button ng-click="sendObject(yellow)">Gelber Stein</button>
+  <button ng-click="sendObject(green)">Grüner Stein</button>
+  <button ng-click="sendObject(wrong)">Falsch</button>
+  <button ng-click="sendObject(correct)">Falsch</button>
+  <button ng-click="sendObject(sun)">Sonne</button>
+
+  <button ng-click="sendMessage()">CLick</button>
+
+  <hr/>
+
+  {{messageFromServer}}
+
+  <div ng-if="messageFromServer.message">
+    <p class="lead text-center">{{messageFromServer.message}}</p>
+    <hr/>
+    <img ng-if="messageFromServer.image" src="{{messageFromServer.image}}" width="100%"/>
+  </div>
+
+
+</div>

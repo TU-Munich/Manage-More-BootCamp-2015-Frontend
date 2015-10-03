@@ -1,0 +1,82 @@
+<div class="container">
+
+  <h1>Kontrolle</h1>
+
+  <p class="lead">Hier können Sie den Test steuern</p>
+
+  <hr/>
+
+  <h5>Sequenz</h5>
+
+  <div>
+    <div class="btn-group" role="group" aria-label="nav">
+      <button class="btn btn-default" ng-click="prev()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+      <button class="btn btn-default" ng-click="restart()"><i class="glyphicon glyphicon glyphicon-stop"></i></button>
+      <button class="btn btn-default" ng-click="play()"><i class="glyphicon glyphicon-play"></i></button>
+      <button class="btn btn-default" ng-click="next()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <hr/>
+
+  <h5>Manuell</h5>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="btn-group-vertical" style="width: 100%; text-align: left" role="group" aria-label="control">
+
+        <!-- <button ng-click="sendMessage()">Send message</button> -->
+        <button class="btn btn-default" ng-click="sendObject(blue)"><span class="label"
+                                                                          style="background: blue">Blauer</span> Stein
+        </button>
+        <button class="btn btn-default" ng-click="sendObject(green)"><span class="label" style="background: green">Grüner</span>
+          Stein
+        </button>
+        <button class="btn btn-default" ng-click="sendObject(red)"><span class="label"
+                                                                         style="background: red">Roter</span> Stein
+        </button>
+        <button class="btn btn-default" ng-click="sendObject(orange)"><span class="label" style="background: orange">Oranger</span>
+          Stein
+        </button>
+        <button class="btn btn-default" ng-click="sendObject(yellow)"><span class="label" style="background: gold">Gelber</span>
+          Stein
+        </button>
+
+        <button class="btn btn-default" ng-click="sendObject(white)"><span class="label" style="background: whitesmoke">Weißer</span>
+          Stein
+        </button>
+
+
+        <button class="btn btn-default" ng-click="sendObject(wrong)"><i class="glyphicon glyphicon-remove"></i> Falsch
+        </button>
+        <button class="btn btn-default" ng-click="sendObject(correct)"><i class="glyphicon glyphicon-ok"></i> Richtig
+        </button>
+        <button class="btn btn-default" ng-click="sendObject(sun)"><i class="glyphicon glyphicon-asterisk"></i>
+          Belohnung
+        </button>
+
+        <br />
+
+      </div>
+    </div>
+    <div class="col-md-6">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Testfenster</div>
+        <div class="panel-body">
+          <div ng-if="messageFromServer.message">
+            <p class="lead text-center">{{messageFromServer.message}}</p>
+            <hr/>
+            <p class="text-center">
+              <img ng-if="messageFromServer.image" src="{{messageFromServer.image}}" width="100px"/>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>

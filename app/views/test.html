@@ -1,0 +1,10 @@
+<div class="container">
+
+  <div ng-if="messageFromServer.message">
+    <p class="lead text-center">{{messageFromServer.message}}</p>
+    <hr/>
+    <img ng-if="messageFromServer.image" src="{{messageFromServer.image}}" width="100%"/>
+  </div>
+
+
+</div>
